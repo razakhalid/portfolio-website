@@ -1,0 +1,44 @@
+* { margin: 0; list-style: none; box-sizing: border-box; padding: 0; text-decoration: none; }
+
+:root {
+    --color-primary: #16194f;
+    --color-secondary: #D44E77;
+    --color-neutral-1: #CAC7FF;
+    --color-neutral-2: #F2F6FF;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey-1: #B4B2C5;
+    --font-size: 18px;
+    --trans: all .4s ease-in-out;
+}
+
+body { font-family: 'Nunito', sans-serif; font-size: var(--font-size); color: var(--color-grey-1); }
+
+a { font-size: inherit; font-family: inherit; font-weight: 400; }
+
+.navigation { min-height: 10vh; width: 100%; display: flex; justify-content: space-between; align-items: center;
+    padding: 0 4rem; }
+
+.logo img { width: 50px; opacity: 0.7; }
+
+.nav-items { display: flex; align-items: center; }
+
+.nav-item { margin: 0 2rem; position: relative; }
+
+.nav-item a { color: var(--color-grey-1); font-weight: 600; padding: 1rem; transition: var(--trans); }
+
+.nav-item a::before { content: ''; position: absolute; width: 100%; height: 2px; bottom: -5px; left: 0;
+    background-color: var(--color-primary); visibility: hidden; transform: scaleX(0); transition: all .3s ease-in-out;
+    opacity: 0.7; }
+
+.nav-item a:hover::before { visibility: visible; transform: scaleX(1); }
+
+.nav-item a:hover { color: var(--color-primary); }
+
+.icons { display: flex; align-items: center; }
+
+.icons .icon { margin: 0 1.5rem; cursor: pointer; }
+
+.icons .icon i { font-size: 1.5rem; color: var(--color-primary); opacity: 0.7; }
+
+/* Header Content */
